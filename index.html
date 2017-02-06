@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>La grande bouffe</title>
+    <link rel="stylesheet" href="semanticui/semantic.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="active item" href="#">Accueil</a>
+            <a class="item" href="#carte">Carte</a>
+            <a class="item" href="#contact">Contact</a>
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui button">Panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui modal panier">
+      <div class="ui segments">
+        <div class="ui segment">
+          <h3>Panier</h3>
+        </div>
+        <div class="ui segment">
+          <table class="panier-container top attached ui basic table">
+          </table>
+        </div>
+        <div class="ui segment total">
+          <h3>TOTAL : 0 €</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <a class="active item" href="#">Accueil</a>
+        <a class="item" href="#carte">Carte</a>
+        <a class="item" href="#contact">Contact</a>
+        <a class="item">Panier</a>
+    </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="slider"></div>
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a class="active item" href="#">Accueil</a>
+                    <a class="item" href="#carte">Carte</a>
+                    <a class="item" href="#contact">Contact</a>
+                    <div class="right item">
+                        <a class="ui inverted button panier">Panier</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui text container">
+                <h1 class="ui inverted header resto-title"></h1>
+                <h2 class="resto-baseline"></h2>
+            </div>
+
+        </div>
+
+        <div class="ui vertical stripe segment">
+          <div class="ui text container">
+              <h3 class="ui header">Description</h3>
+              <p class="resto-desc"></p>
+          </div>
+        </div>
+
+        <div id="carte" class="ui vertical stripe segment">
+          <div class="ui text container">
+              <h3 class="ui header">Carte</h3>
+              <div class="ui items courses">
+              </div>
+          </div>
+        </div>
+
+        <div id="contact" class="ui vertical stripe segment">
+          <div class="ui text container">
+              <h3 class="ui header">Localisation</h3>
+              <div class="ui image fluid resto-gmap">
+                <iframe src="" frameborder="0"></iframe>
+              </div>
+          </div>
+        </div>
+
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="height wide column">
+                      <h4 class="ui inverted header">Adresse</h4>
+                      <p><span class="resto-address"></span><br/>
+                      <span class="resto-codepostal"></span> <span class="resto-ville"></span></p>
+                    </div>
+                    <div class="three wide column">
+                      <div class="ui inverted link list right">
+                        <a class="item" href="#">Accueil</a>
+                        <a class="item" href="#carte">Carte</a>
+                        <a class="item" href="#contact">Contact</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="semanticui/semantic.min.js" charset="utf-8"></script>
+    <script src="data/data.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
