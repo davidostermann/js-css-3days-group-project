@@ -1,20 +1,21 @@
+var model = {};
 
-function getTotalSelected() {
+model.getTotalSelected = function () {
   return contenu.carte.reduce(function(acc, item) {
     return acc + item.selected;
   }, 0);
-}
+};
 
-function getTotalPrice() {
+model.getTotalPrice = function() {
   return contenu.carte.reduce(function(acc, item) {
     if(item.selected > 0) {
       acc += (item.selected * parseFloat(item.price) );
     }
     return acc;
   }, 0);
-}
+};
 
-function addSelected(id) {
+model.addSelected = function(id) {
   var items = contenu.carte.filter( function(item) {
     return item.id === Number(id);
   });
@@ -22,9 +23,9 @@ function addSelected(id) {
   if(items.length > 0) {
     items[0].selected ++;
   }
-}
+};
 
-function removeSelected(id) {
+model.removeSelected = function(id) {
   var items = contenu.carte.filter( function(item) {
     return item.id === Number(id);
   });
@@ -32,4 +33,4 @@ function removeSelected(id) {
   if(items.length > 0) {
     items[0].selected = Math.max(0, items[0].selected - 1);
   }
-}
+};

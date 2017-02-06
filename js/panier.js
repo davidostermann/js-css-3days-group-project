@@ -2,10 +2,11 @@
 var panierContainer = document.querySelector('.panier-container');
 var totalContainer = document.querySelector('.panier .total h3');
 var panierEntete = '<tr><th></th><th>Plat</th><th>Prix unitaire</th><th>Quantité</th><th>Sous-total</th></tr>';
+
 function refreshCart() {
 
   // clear
-  panierContainer.innerHTML = (getTotalSelected() > 0) ? panierEntete : '';
+  panierContainer.innerHTML = (model.getTotalSelected() > 0) ? panierEntete : '';
 
   // populate cart
   contenu.carte.forEach(function(item) {
@@ -38,13 +39,13 @@ function refreshCart() {
 
   });
 
-  totalContainer.textContent = 'TOTAL : ' + getTotalPrice() + ' €';
+  totalContainer.textContent = 'TOTAL : ' + model.getTotalPrice() + ' €';
 
   // remove
   $('.panier-container .remove').on('click', function(e) {
 
     var id = $(this).closest('tr').attr('data-id');
-    removeSelected(id);
+    model.removeSelected(id);
     refreshCart();
 
   });
