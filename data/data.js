@@ -22,7 +22,7 @@ var contenu = {
     },
     {
       id: 2,
-      name: 'Tagine aux pruneaux',
+      name: 'Tajine aux pruneaux',
       image:'https://i1.wp.com/cotesoleils.fr/wp-content/uploads/2015/06/tajine-agneau-et-pruneaux-algc3a9rie1.jpg',
       description: 'Un des plus célèbres Tajines Marocains, servi avec une délicieuse viande de veau et des pruneaux issus de l\'agriculture biologique',
       price: '18 €',

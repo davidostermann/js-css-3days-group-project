@@ -40,8 +40,12 @@ contenu.carte.forEach(function(item) {
   coursesContainer.appendChild(divItem);
 });
 
-$('.courses i').on('click', function(e) {
-  var id = $(this).closest('.item').attr('data-id');
-  addSelected(id);
-  refreshCart();
-});
+initPanier();
+
+//setTimeout(initPanier, 0);
+
+// $('.courses i').on('click', function(e) {
+//   var id = $(this).closest('.item').attr('data-id');
+//   addSelected(id);
+//   refreshCart();
+// });

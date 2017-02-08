@@ -1,4 +1,3 @@
-
 function getTotalSelected() {
   return contenu.carte.reduce(function(acc, item) {
     return acc + item.selected;
